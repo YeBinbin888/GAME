@@ -2,27 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">  
     <title>夜冰冰</title>
 </head>
 <body>
-    <style>
-        /* 强制横屏显示（宽 > 高） */
-        @media screen and (orientation: landscape) {
-          body {
-            width: 100vh; /* 高度转宽度 */
-            height: 100vw; /* 宽度转高度 */
-            transform: rotate(-90deg); /* 旋转页面（根据需求调整角度） */
-            transform-origin: top left; /* 旋转原点 */
-          }
-        }
-        /* 禁止竖屏显示（可选） */
-        @media screen and (orientation: portrait) {
-          body {
-            display: none; /* 隐藏竖屏内容 */
-          }
-        }
-        </style>
+    <style>  
+        /* 当手机横屏时（宽 > 高） */  
+        @media screen and (orientation: landscape) {  
+          body {  
+            /* 把网页的宽高调换，适应横屏 */  
+            width: 100vh; /* 高度变宽度，vh是手机竖屏时的高度 */  
+            height: 100vw; /* 宽度变高度，vw是手机竖屏时的宽度 */  
+            /* 旋转网页：-90度是向左横屏，90度是向右横屏 */  
+            transform: rotate(-90deg);  
+            /* 旋转的起点设为左上角，避免位置偏移 */  
+            transform-origin: top left;  
+          }  
+        
+          /* 隐藏竖屏时的内容（可选） */  
+          @media screen and (orientation: portrait) {  
+            body {  
+              display: none; /* 竖屏时直接隐藏整个网页，强迫用户横屏 */  
+            }  
+          }  
+        }  
+        </style> 
+        <script>  
+            // 检查手机是否支持强制横屏  
+            if (screen.orientation && screen.orientation.lock) {  
+              screen.orientation.lock('landscape'); // 锁定横屏  
+            } else {  
+              // 如果不支持，弹出提示让用户手动横屏  
+              alert('请将手机横屏查看封面~');  
+            }  
+            </script>   
+
         
     <img src="image/f4db362e0fe2ef53072439be46a1d05.jpg" ></img>
     哈哈哈
