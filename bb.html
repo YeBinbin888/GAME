@@ -7,35 +7,19 @@
 </head>
 <body>
     <style>  
-        /* 当手机横屏时（宽 > 高） */  
-        @media screen and (orientation: landscape) {  
-          body {  
-            /* 把网页的宽高调换，适应横屏 */  
-            width: 100vh; /* 高度变宽度，vh是手机竖屏时的高度 */  
-            height: 100vw; /* 宽度变高度，vw是手机竖屏时的宽度 */  
-            /* 旋转网页：-90度是向左横屏，90度是向右横屏 */  
-            transform: rotate(-90deg);  
-            /* 旋转的起点设为左上角，避免位置偏移 */  
-            transform-origin: top left;  
-          }  
-        
-          /* 隐藏竖屏时的内容（可选） */  
-          @media screen and (orientation: portrait) {  
-            body {  
-              display: none; /* 竖屏时直接隐藏整个网页，强迫用户横屏 */  
-            }  
-          }  
+        body {  
+          /* 强制将网页旋转为横版（向左横屏） */  
+          transform: rotate(-90deg);  
+          /* 调整尺寸撑满屏幕 */  
+          width: 100vh;  
+          height: 100vw;  
+          /* 旋转原点设为左上角，避免偏移 */  
+          transform-origin: top left;  
+          /* 隐藏默认的竖版内容（关键！） */  
+          transform-style: preserve-3d;  
+          overflow: hidden;  
         }  
-        </style> 
-        <script>  
-            // 检查手机是否支持强制横屏  
-            if (screen.orientation && screen.orientation.lock) {  
-              screen.orientation.lock('landscape'); // 锁定横屏  
-            } else {  
-              // 如果不支持，弹出提示让用户手动横屏  
-              alert('请将手机横屏查看封面~');  
-            }  
-            </script>   
+        </style>   
 
         
     <img src="image/f4db362e0fe2ef53072439be46a1d05.jpg" ></img>
