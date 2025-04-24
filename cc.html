@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label for="option1">男主角</label>
+        <input type="radio" id="option1" name="option" value="nzj1.html">
+    </div>
+    <div>
+        <label for="option2">女主角</label>
+        <input type="radio" id="option2" name="option" value="nzj2.html">
+    </div>
+    <input type="button" value="确定" onclick="goToSelectedPage()">
+    <input type="button" value="退出" onclick="goBackToPage()">
+
+    <script>
+        function goToSelectedPage() {
+            var option1 = document.getElementById('option1');
+            var option2 = document.getElementById('option2');
+            if (option1.checked) {
+                window.location = option1.value;
+            } else if (option2.checked) {
+                window.location = option2.value;
+            }
+        }
+
+        function goBackToPage() {
+            // 这里将'指定网页的地址'替换为实际要返回的网页地址
+            window.location.replace('bb.html');
+        }
+    </script>
+</body>
+</html>
