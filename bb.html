@@ -2,10 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>夜冰冰</title>
 </head>
 <body>
-   <img src="image/f4db362e0fe2ef53072439be46a1d05.jpg" ></img>
+    <style>
+        /* 强制横屏显示（宽 > 高） */
+        @media screen and (orientation: landscape) {
+          body {
+            width: 100vh; /* 高度转宽度 */
+            height: 100vw; /* 宽度转高度 */
+            transform: rotate(-90deg); /* 旋转页面（根据需求调整角度） */
+            transform-origin: top left; /* 旋转原点 */
+          }
+        }
+        /* 禁止竖屏显示（可选） */
+        @media screen and (orientation: portrait) {
+          body {
+            display: none; /* 隐藏竖屏内容 */
+          }
+        }
+        </style>
+        
+    <img src="image/f4db362e0fe2ef53072439be46a1d05.jpg" ></img>
 </body>
 </html>
