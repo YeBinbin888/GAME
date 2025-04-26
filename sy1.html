@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .image-container {
+      position: relative; /* 相对定位，为子元素绝对定位提供参考 */
+    }
+    
+    .overlay-img {
+      position: absolute; /* 绝对定位，可精确控制在父容器内的位置 */
+      top: 50%; /* 距离父容器顶部50%  */
+      left: 50%; /* 距离父容器左侧50%  */
+      transform: translate(-50%, -50%); /* 向上和向左移动自身一半的距离，实现居中 */
+    }
+      </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="image/f4db362e0fe2ef53072439be46a1d05.jpg" alt="背景图片"> <!-- 背景图片，替换为实际图片路径 -->
+        <a href="image/ecfe9abebd939aad5c41261754655d5b.mp4"> <!-- 设置链接地址，替换为目标网址 -->
+          <img src="image/微信图片_20250424231229.jpg" alt="叠加图片" class="overlay img"> <!-- 叠加图片，替换为实际图片路径 -->
+        </a>
+      </div>
+</body>
+</html>
