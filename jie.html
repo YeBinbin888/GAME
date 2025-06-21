@@ -1,0 +1,1618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script>
+    _HOST_ = "//mooc1-api.chaoxing.com";
+    _CP_ = "/mooc-ans";
+    _HOST_CP1_ = "//mooc1-api.chaoxing.com/mooc-ans";
+    // _HOST_CP2_ = _HOST_ + _CP_;
+    _HOST_CP2_ = _CP_;
+</script><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>作业详情</title>
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/pop.css"/>
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/common.css?v=2025-0424-1038" />
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/marking_icon.css" />
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/viewStudent.css?v=2025-0526-1542" />
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/taskStudent_pop.css" />
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/oralTest.css?v=2022-0727-1100" />
+<link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/animationQuestion.css" />
+<style type="text/css">
+	.classtips{margin: 30px 40px 0;padding:10px 20px;border: 1px solid #FBE59A;background: #FEFBE8;border-radius: 4px;font-size:14px;color:#474C59;}
+	.classtips .tipsPop{display:inline-block;width:16px;height:16px;vertical-align:middle;margin-right:8px;background:#ff0}
+	.classtips .tipsPop img{display:block;width:100%;height:100%}
+	/*知识点样式*/
+	.colorGray{color:#8A8B99}
+	.knowledgeList li{float:left;padding:6px 14px;background:#fff;border:solid 1px #DADFE5;border-radius:4px;margin-right:16px;font-size:12px;line-height:18px;box-sizing:border-box;overflow: hidden;
+		text-overflow: ellipsis;white-space: nowrap;max-width:110px;margin-bottom:16px}
+	.knowledgeList li:hover{ background: #CEE4F8}
+	.knowledgePointBx {margin-top:16px}
+	.knowledgePointBx .answerCon{width:calc(100% - 70px)}
+	.knowledgePointBx .answerCon ul li{padding:0;max-width:none}
+	.knowledgePointBx .answerCon ul li a{padding:6px 14px;display:block;max-width:300px;color:#8A8B99;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+	.knowledgePointBx .answerCon ul li a:hover{color:#3A8BFF}
+	/*知识点样式*/
+	.selfMarkScore{line-height: 29px;padding: 0 10px;height: 29px;background: rgba(251, 251, 251, 1);border-radius: 99px;border: 1px solid #F4F5F6;margin-top: 55px;}
+</style>
+			<style>
+			.workTextWrap * {
+				white-space: normal !important;
+			}
+		</style>
+	<link href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/font.css?v=2025-0403-1500" rel="stylesheet" type="text/css" /><link href="//mooc1-api.chaoxing.com/mooc-ans/css/questionBank/questionBankUsual.css?v=2019-1120-1400" type="text/css" rel="stylesheet"/><script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/common/jquery-migrate.min.js"></script><script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/js/poptoast.js"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/js/poplayout.js?v=2022-0218-1500"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/js/viewStudent.js"></script>
+<script src="//mooc1-api.chaoxing.com/mooc-ans/space/work/js/attach-mark.js?v=2023-1026-1600"></script><script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/js/animation-question.js?v=2023-0216-1800"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/js/work/stu-knowledge-point-hover.js?v=2025-0526-1542"></script>
+<script type="text/javascript">window.SUPPORT_AUDIO_SETTING = true; window.SUPPORT_AUDIO_CONTROL = true;</script>
+<script src="//mooc1-api.chaoxing.com/mooc-ans/js/work/work-audio-playtimes.js?v=2024-0104-1500"></script>
+
+<input type="hidden" id="fromDevice" value="mooc2"/>
+
+<div class="maskDiv" style="display:none;z-index:1000;" id="audioLimitTimesWinNew">
+    <div class="popSetDiv wid440">
+        <div class="popHead RadisTop">
+            <a href="javascript:;" class="popClose fr" onclick="$('#audioLimitTimesWinNew').fullFadeOut();">
+                <img src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/images/popClose.png"/>
+            </a>
+            <p class="fl fs18 color1">提示</p>
+        </div>
+        <div class="het62"></div>
+        <p class="popWord fs16 color2 audioLimitTimesTip">此附件仅支持打开 <span></span> 次，你已打开 <span></span> 次，不能再次打开</p>
+        <div class="popBottom RadisBom">
+            <a href="javascript:;" class="jb_btn jb_btn_92 fr fs14" onclick="$('#audioLimitTimesWinNew').fullFadeOut();">知道了</a>
+        </div>
+        <div class="het72"></div>
+    </div>
+</div>
+
+<div class="AlertCon02" style="width:400px; height:200px;display:none;" id="audioLimitTimesWin">
+    <h3 class="clearfix">
+        <a href="javascript:;" class="closed02 fr" onclick="WAY.box.hide();$('#audioLimitTimesWin').css('display','none')" style="margin-top:1px;"></a>
+    </h3>
+    <div class="con03">
+        <p class="audioLimitTimesTip" style="margin-top:16px;text-align:left;">此附件仅支持打开 <span></span> 次，你已打开 <span></span> 次，不能再次打开</p>
+        <div style="margin-top:60px;">
+            <a class="bluebtn" href="javascript:;" onclick="WAY.box.hide();$('#audioLimitTimesWin').css('display','none')">知道了</a>
+        </div>
+    </div>
+</div></head>
+<body>
+<script src="//mooc1-api.chaoxing.com/mooc-ans/space/work/js/preview-attach.js?v=2023-1102-1900"></script><link href="//mooc1-api.chaoxing.com/mooc-ans/css/work/viewer.min.css?v=2021-0830-1700" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/js/jquery.md5.js"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/space/work/js/viewer-jquery.min.js?v=2024-0124-0200"></script>
+<script type="text/javascript">
+try{
+	$(function(){
+		var imgList = $(".TiMu").find("div img:not(.workAttach img, .attach img, .attachNew img, .stuAnswerArea img, .popClose img, .ans-formula-moudle, .no_view)");
+		for (var i = 0, len = imgList.size(); i < len; i++) {
+			 var src = imgList.eq(i).attr("src");
+			 if(src){
+    			var index = src.indexOf("375_1024");
+    			if (index != -1) {
+    				src = src.replace("375_1024", "origin");
+    			}
+                 var index2 = src.indexOf("750_1024");
+                 if (index2 != -1) {
+                     src = src.replace("750_1024", "origin");
+                 }
+    			imgList.eq(i).attr("data-original", src);
+		   }
+		}
+        $(".TiMu").find("div img:not(.workAttach img, .attach img, .attachNew img, .stuAnswerArea img, .popClose img, .no_view)").viewer({
+			url : 'data-original',
+		});
+	})
+  }catch(error){}
+</script>
+
+
+<input type="hidden" id="courseId" value="249848120" />
+<input type="hidden" id="classId" value="114776179" />
+<input type="hidden" id="cpi" value="414674295"/>
+<input type="hidden" id="workId" value="43858076" />
+<input type="hidden" id="answerId" value="53787455"/>
+<input type="hidden" id="enc" value="5154db3f9080474ea652fdca18d95cd6"/>
+<input type="hidden" id="creatorId" value="414674295"/>
+
+<div class="subNav">作业详情</div>
+<div class="het40"></div>
+<div class="fanyaMarking TiMu" id="fanyaMarking">
+	<div class="fanyaMarking_left whiteBg">
+		<div class="borderBom padBom20 detailsHead" style="overflow: hidden;">
+						<h2 class="mark_title" tabindex="0">25年 导论</h2>
+			<div class="infoHead fl" tabindex="0">
+				<span>题量: 21</span>
+				<span>满分: 100</span>
+				<div style="margin-top: 10px;margin-left: -9px;">
+					<p class="rightBord">作答时间:<em>05-26 09:14</em>至<em></em></p>
+									</div>
+			</div>
+
+							<div class="analysisCard fl"><a target="_blank" href="https://stat2-ans.chaoxing.com/study-knowledge/ans?courseid=249848120&cpi=414674295&clazzid=114776179&ut=s&relationId=43858076&type=2"><i class="custom-style"></i>智能分析</a></div>
+				<div class="clear"></div>
+			
+						<span class="resultNum" tabindex="0"><i class="custom-style">97.6</i>分</span>
+					</div>
+				
+				
+							<div class="mark_table padTop60 ans-cc fontLabel">
+								
+					
+					<div class="mark_item">
+						                            <h2 class="type_tit" tabindex="0">一. 单选题（共9题，42.4分）</h2>
+																							
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515703" data="404515703" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">1. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">中国共产党推进马克思主义中国化过程中的第一次历史性飞跃,形成了( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																																																																	<li tabindex="0" class="workTextWrap">A. 毛泽东思想</li>
+																																							<li tabindex="0" class="workTextWrap">B. 科学发展观</li>
+																																							<li tabindex="0" class="workTextWrap">C. “三个代表”重要思想</li>
+																																							<li tabindex="0" class="workTextWrap">D. 邓小平理论</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">A</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:毛泽东思想; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">A</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:毛泽东思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515703', '0', '单选题', '16618397fe8449269c832018133ee201', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515704" data="404515704" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">2. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">马克思主义中国化的最新理论成果是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 毛泽东思想</li>
+																																							<li tabindex="0" class="workTextWrap">B. 科学发展观</li>
+																																																																																	<li tabindex="0" class="workTextWrap">C. 习近平新时代中国特色社会主义思想</li>
+																																							<li tabindex="0" class="workTextWrap">D. 邓小平理论</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">C</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:习近平新时代中国特色社会主义思想; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">C</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:习近平新时代中国特色社会主义思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515704', '0', '单选题', 'f81e091f6c8043bc96bdf24aef23a8a8', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515705" data="404515705" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">3. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">1921年中国共产党诞生后,( )成为中国共产党人的重大时代课题。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 领导工人运动</li>
+																																							<li tabindex="0" class="workTextWrap">B. 遵循马克思列宁主义</li>
+																																																																																	<li tabindex="0" class="workTextWrap">C. “马克思主义中国化”</li>
+																																							<li tabindex="0" class="workTextWrap">D. 领导中国革命</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">C</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:“马克思主义中国化”; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">C</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:“马克思主义中国化”; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515705', '0', '单选题', 'b94cac76b4324f64b46d909f9e7ea559', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515706" data="404515706" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">4. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">第一次提出“马克思主义中国化”的会议是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 中共二大</li>
+																																							<li tabindex="0" class="workTextWrap">B. 中共四大</li>
+																																																																																	<li tabindex="0" class="workTextWrap">C. 六届六中全会</li>
+																																							<li tabindex="0" class="workTextWrap">D. 中共七大</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">C</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:六届六中全会; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">C</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:六届六中全会; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515706', '0', '单选题', '1a1a14edafab4c75802a49e2fe75371d', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515707" data="404515707" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">5. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">中国共产党一经诞生,就把为中国人民谋幸福、为中华民族谋复兴确立为自己的初心使命。一百年来,中国共产党团结带领中国人民进行的一切奋斗、一切牺牲、一切创造,归结起来就是一个主题( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 实现共同富裕</li>
+																																							<li tabindex="0" class="workTextWrap">B. 实现全面建成小康社会</li>
+																																							<li tabindex="0" class="workTextWrap">C. 实现社会主义现代化</li>
+																																																																																	<li tabindex="0" class="workTextWrap">D. 实现中华民族伟大复兴</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">D</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:实现中华民族伟大复兴; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">D</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:实现中华民族伟大复兴; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515707', '0', '单选题', 'e5c2f70b22674f028d71ab194d3bc632', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515708" data="404515708" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">6. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">中国特色社会主义理论体系不包括( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 邓小平理论</li>
+																																							<li tabindex="0" class="workTextWrap">B. 科学发展观</li>
+																																							<li tabindex="0" class="workTextWrap">C. 习近平新时代中国特色社会主义思想</li>
+																																																																																	<li tabindex="0" class="workTextWrap">D. 毛泽东思想</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">D</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:毛泽东思想; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">D</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:毛泽东思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515708', '0', '单选题', 'f84b46b6690d483c9984ca2815d1bbe9', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515709" data="404515709" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">7. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">( )的召开,实现了新中国成立以来党的历史上具有深远意义的伟大转折,开启了改革开放和社会主义现代化建设历史新时期</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																																																																	<li tabindex="0" class="workTextWrap">A. 中共十一届三中全会</li>
+																																							<li tabindex="0" class="workTextWrap">B. 中共十二大</li>
+																																							<li tabindex="0" class="workTextWrap">C. 中共十三大</li>
+																																							<li tabindex="0" class="workTextWrap">D. 中共十一届六中全会</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">A</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:中共十一届三中全会; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">A</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:中共十一届三中全会; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515709', '0', '单选题', '1c277ab07531485aaaeed6c704e4c0b0', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515710" data="404515710" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">8. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">以下对毛泽东思想的科学含义理解错误的是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 被实践证明了的关于中国革命和建设的正确理论原则和经验总结</li>
+																																																																																	<li tabindex="0" class="workTextWrap">B. 毛泽东思想是毛泽东一个人的思想</li>
+																																							<li tabindex="0" class="workTextWrap">C. 在革命和建设的长期实践中形成的</li>
+																																							<li tabindex="0" class="workTextWrap">D. 马克思列宁主义在中国的运用和发展</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">B</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:毛泽东思想是毛泽东一个人的思想; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">B</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:毛泽东思想是毛泽东一个人的思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.7</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515710', '0', '单选题', '42be3f3e75d5486b8d7477c268bb5529', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515711" data="404515711" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">9. <span class="colorShallow">(单选题)</span><span class="qtContent workTextWrap">党的十八大以来,以习近平为主要代表的中国共产党人,创立了( ),这是全党全国人民为实现中华民族伟大复兴而奋斗的行动指南。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 中国特色社会主义思想</li>
+																																																																																	<li tabindex="0" class="workTextWrap">B. 习近平新时代中国特色社会主义思想</li>
+																																							<li tabindex="0" class="workTextWrap">C. “人类命运共同体”的思想</li>
+																																							<li tabindex="0" class="workTextWrap">D. 中国特色社会主义论体系</li>
+																		</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">B</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:习近平新时代中国特色社会主义思想; </span>
+																							<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">B</span></span>
+											<span class="element-invisible-hidden colorGreen marginRight40 fl">:习近平新时代中国特色社会主义思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->
+									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515711', '0', '单选题', '736ecaf180184b12a07785b53eef043c', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+											</div>
+				
+					
+					<div class="mark_item">
+						                            <h2 class="type_tit" tabindex="0">二. 多选题（共5题，24分）</h2>
+																							
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515712" data="404515712" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">10. <span class="colorShallow">(多选题)</span><span class="qtContent workTextWrap">实践证明，中国共产党为什么能，中国特色社会主义为什么好，归根到底是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 大国沙文主义行</li>
+																																																																																<li tabindex="0" class="workTextWrap">B. 马克思主义行</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">C. 中国化时代化的马克思主义行</li>
+																																																																																<li tabindex="0" class="workTextWrap">D. 空想社会主义行</li>
+																																						</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">BC</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:马克思主义行; 中国化时代化的马克思主义行; </span>
+																						<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">BC</span></span>
+												<span class="element-invisible-hidden colorGreen marginRight40 fl">:马克思主义行; 中国化时代化的马克思主义行; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515712', '1', '多选题', 'ad6bda28a17e4e319f763c32fb597ef8', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515713" data="404515713" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">11. <span class="colorShallow">(多选题)</span><span class="qtContent workTextWrap">在马克思主义中国化时代化的历史进程中，产生的理论成果是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																																												<li tabindex="0" class="workTextWrap">A. 毛泽东思想</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">B. 邓小平理论</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">C. “三个代表”重要思想、科学发展观</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">D. 习近平新时代中国特色社会主义思想</li>
+																																																											</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">ABCD</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:毛泽东思想; 邓小平理论; “三个代表”重要思想、科学发展观; 习近平新时代中国特色社会主义思想; </span>
+																						<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">ABCD</span></span>
+												<span class="element-invisible-hidden colorGreen marginRight40 fl">:毛泽东思想; 邓小平理论; “三个代表”重要思想、科学发展观; 习近平新时代中国特色社会主义思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515713', '1', '多选题', '58ab17f2c9d24566a201ac3f7d965f2c', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515714" data="404515714" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">12. <span class="colorShallow">(多选题)</span><span class="qtContent workTextWrap">毛泽东思想和中国特色社会主义理论体系，它们都是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																																												<li tabindex="0" class="workTextWrap">A. 马克思列宁主义在中国的运用和发展</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">B. 以独创性的理论成果丰富和发展了马克思主义的理论宝库</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">C. 党和国家必须长期坚持的指导思想</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">D. 全国各族人民团结奋斗的共同思想基础</li>
+																																						</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">ABC</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:马克思列宁主义在中国的运用和发展; 以独创性的理论成果丰富和发展了马克思主义的理论宝库; 党和国家必须长期坚持的指导思想; </span>
+																						<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">ABCD</span></span>
+												<span class="element-invisible-hidden colorGreen marginRight40 fl">:马克思列宁主义在中国的运用和发展; 以独创性的理论成果丰富和发展了马克思主义的理论宝库; 党和国家必须长期坚持的指导思想; 全国各族人民团结奋斗的共同思想基础; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_bandui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">2.4</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515714', '1', '多选题', '662b0bf42ec34e2a99f62f4b21c1be59', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515715" data="404515715" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">13. <span class="colorShallow">(多选题)</span><span class="qtContent workTextWrap">推进马克思主义中国化时代化是( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																							<li tabindex="0" class="workTextWrap">A. 实现中华民族伟大复兴的根本保证</li>
+																																																																																<li tabindex="0" class="workTextWrap">B. 马克思主义理论本身发展的内在要求</li>
+																																																																																<li tabindex="0" class="workTextWrap">C. 中国特色社会主义最本质的特征</li>
+																																																																																<li tabindex="0" class="workTextWrap">D. 解决中国实际问题的客观需要</li>
+																																																											</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">BD</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:马克思主义理论本身发展的内在要求; 解决中国实际问题的客观需要; </span>
+																						<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">BD</span></span>
+												<span class="element-invisible-hidden colorGreen marginRight40 fl">:马克思主义理论本身发展的内在要求; 解决中国实际问题的客观需要; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515715', '1', '多选题', 'bece5c5f4c1b43e2b220d90071334a7d', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515716" data="404515716" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">14. <span class="colorShallow">(多选题)</span><span class="qtContent workTextWrap">中国特色社会主义理论体系包括( )</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+																																																												<li tabindex="0" class="workTextWrap">A. 邓小平理论</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">B. 科学发展观</li>
+																																																																																																					<li tabindex="0" class="workTextWrap">C. 习近平新时代中国特色社会主义思想</li>
+																																																																																<li tabindex="0" class="workTextWrap">D. 毛泽东思想</li>
+																																						</ul>
+									
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">ABC</span></span>
+											<span class="element-invisible-hidden colorDeep marginRight40 fl">:邓小平理论; 科学发展观; 习近平新时代中国特色社会主义思想; </span>
+																						<span class="colorGreen marginRight40 fl"><i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent workTextWrap">ABC</span></span>
+												<span class="element-invisible-hidden colorGreen marginRight40 fl">:邓小平理论; 科学发展观; 习近平新时代中国特色社会主义思想; </span>
+																					</div>
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																										<span class="marking_dui"></span>
+																									</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515716', '1', '多选题', '1e711f164c3d4f8e9a3892b6f6f1b6a5', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+											</div>
+				
+					
+					<div class="mark_item">
+						                            <h2 class="type_tit" tabindex="0">三. 判断题（共7题，33.6分）</h2>
+																							
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515717" data="404515717" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">15. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">马克思主义中国化的第一次飞跃形成的理论成果是中国特色社会主义理论。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">错</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											            										        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">错</span>
+		            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515717', '3', '判断题', '3a0f795ce21c4f4d96af7194f0f72458', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515718" data="404515718" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">16. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">毛泽东思想不属于中国特色社会主义理论体系的组成部分。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">对</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">对</span>
+		            										            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515718', '3', '判断题', '53c3c04f43f0458bb64c89b965914b6c', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515719" data="404515719" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">17. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">毛泽东思想是马克思列宁主义在中国的运用和发展。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">对</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">对</span>
+		            										            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515719', '3', '判断题', 'a6a0d04d37454396aaeda39b1060343f', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515720" data="404515720" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">18. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">推进马克思主义中国化是完善市场经济体制的需要。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">错</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											            										        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">错</span>
+		            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515720', '3', '判断题', 'b226fb972358468e83eedc6a84f9e45e', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515721" data="404515721" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">19. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">十月革命一声炮响，给中国送来了马克思列宁主义。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">对</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">对</span>
+		            										            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515721', '3', '判断题', 'efbd8e116df842a6a849ca57588d8eda', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515722" data="404515722" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">20. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">标志着“马克思主义中国化”这一命题正式提出在党的一大。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">错</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											            										        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">错</span>
+		            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515722', '3', '判断题', 'b84d8f0214b545548d8f0b8f588d83f0', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+																		
+						
+							<div class="marBom60 questionLi singleQuesId" style="word-wrap: break-word;" id="question404515723" data="404515723" tabindex="0" aria-label="题目详情">
+								<div class="aiArea">
+								<div class="aiAreaContent">
+																	<h3 class="mark_name colorDeep" tabindex="0">21. <span class="colorShallow">(判断题)</span><span class="qtContent workTextWrap">马克思主义是我们认识世界、把握规律、追求真理、改造世界的强大思想武器。</span></h3>
+								
+																	<ul class="mark_letter colorDeep qtDetail">
+										<li tabindex="0">A. 对</li>
+										<li tabindex="0">B. 错</li>
+									</ul>
+									<div class="mark_answer" tabindex="0">
+										<div class="mark_key clearfix">
+											<span class="colorDeep marginRight40 fl"><i class="fontWeight custom-style">我的答案:</i><span class="stuAnswerContent">对</span></span>
+																						<span class="colorGreen marginRight40 fl">
+																											        										<i class="fontWeight custom-style">正确答案:</i><span class="rightAnswerContent">对</span>
+		            										            																															</span>
+																					</div>
+										
+										<div class="mark_score">
+											<div class=" fl catalog_tishi80">
+																								<div class="mark_judge_name">
+																    									<span class="marking_dui"></span>
+			    																					</div>
+																							</div>
+																						<div class="totalScore fr"><i class="custom-style">4.8</i>分</div>
+																					</div>
+										
+																				<!--显示知识点-->
+    <!--显示知识点-->									</div>
+								
+																</div>
+																<a href="javascript:;" onclick="initAssistant('question404515723', '3', '判断题', 'f4415e9f363540d191570e49fa1c0883', '0', 0, '43858076')" class="aiAssistant"><span><i class="custom-style">AI讲解</i></span></a>
+																</div>
+							</div>
+											</div>
+							</div>
+			</div>
+	
+		<div class="fanyaMarking_right" id="rightHeight">
+		<div class="topicNumber" id="topicNumberScroll" tabindex="0" aria-label="答题卡">
+												
+						
+                        <div class="topicNumber_checkbox colorDeep fs14" tabindex="0">
+														一. 单选题（42.4分）                        </div>
+                        <ul class="topicNumber_list clearfix" tabindex="-1" aria-hidden="true" >
+							                                <li id="answerSheet404515703" data="404515703" class="active"  tabindex="0" role="option">1</li>
+							                                <li id="answerSheet404515704" data="404515704" class="active"  tabindex="0" role="option">2</li>
+							                                <li id="answerSheet404515705" data="404515705" class="active"  tabindex="0" role="option">3</li>
+							                                <li id="answerSheet404515706" data="404515706" class="active"  tabindex="0" role="option">4</li>
+							                                <li id="answerSheet404515707" data="404515707" class="active"  tabindex="0" role="option">5</li>
+							                                <li id="answerSheet404515708" data="404515708" class="active"  tabindex="0" role="option">6</li>
+							                                <li id="answerSheet404515709" data="404515709" class="active"  tabindex="0" role="option">7</li>
+							                                <li id="answerSheet404515710" data="404515710" class="active"  tabindex="0" role="option">8</li>
+							                                <li id="answerSheet404515711" data="404515711" class="active"  tabindex="0" role="option">9</li>
+							                        </ul>
+					
+						
+                        <div class="topicNumber_checkbox colorDeep fs14" tabindex="0">
+														二. 多选题（24分）                        </div>
+                        <ul class="topicNumber_list clearfix" tabindex="-1" aria-hidden="true" >
+							                                <li id="answerSheet404515712" data="404515712" class="active"  tabindex="0" role="option">10</li>
+							                                <li id="answerSheet404515713" data="404515713" class="active"  tabindex="0" role="option">11</li>
+							                                <li id="answerSheet404515714" data="404515714" class="active"  tabindex="0" role="option">12</li>
+							                                <li id="answerSheet404515715" data="404515715" class="active"  tabindex="0" role="option">13</li>
+							                                <li id="answerSheet404515716" data="404515716" class="active"  tabindex="0" role="option">14</li>
+							                        </ul>
+					
+						
+                        <div class="topicNumber_checkbox colorDeep fs14" tabindex="0">
+														三. 判断题（33.6分）                        </div>
+                        <ul class="topicNumber_list clearfix" tabindex="-1" aria-hidden="true" >
+							                                <li id="answerSheet404515717" data="404515717" class="active"  tabindex="0" role="option">15</li>
+							                                <li id="answerSheet404515718" data="404515718" class="active"  tabindex="0" role="option">16</li>
+							                                <li id="answerSheet404515719" data="404515719" class="active"  tabindex="0" role="option">17</li>
+							                                <li id="answerSheet404515720" data="404515720" class="active"  tabindex="0" role="option">18</li>
+							                                <li id="answerSheet404515721" data="404515721" class="active"  tabindex="0" role="option">19</li>
+							                                <li id="answerSheet404515722" data="404515722" class="active"  tabindex="0" role="option">20</li>
+							                                <li id="answerSheet404515723" data="404515723" class="active"  tabindex="0" role="option">21</li>
+							                        </ul>
+														</div>
+	</div>
+	</div>
+
+<div class="maskDiv popMoveShowHide" style="display:none;" id="recordList">
+	<div class="popDiv wid640 popMove">
+		<div class="popHead">
+			<a href="javascript:;" onclick="closeAnswers();" class="popClose popMoveDele fr"><img src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/images/popClose.png" /></a>
+			<p class="fl fs18 colorDeep">作答记录</p>
+		</div>
+		<div class="het62"></div>
+				<div id="content"></div>
+	</div>			
+</div>
+<div id="aiAssistantId"></div>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/js/ServerHost.js"></script>
+<script type="text/javascript" src="//mooc1-api.chaoxing.com/mooc-ans/mooc2/js/html2canvas.min.js"></script>
+<script type="text/javascript" async src="https://stat2-ans.chaoxing.com/stat2/js/cozebot-sdk.min.js"></script>
+<script type="text/javascript">
+    var imgUrl1 = ServerHost.purl.replace("http://", "").replace("https://", "") + "/star3";
+    var imgUrl2 = ServerHost.purlNew.replace("http://", "").replace("https://", "") + "/star3";
+
+    //0作业 1 考试 2 测验 3 自测
+    function initAssistant(exampleId, questionType, typeName, questionId, questionTypeId, taskType, taskId) {
+        var courseId = "249848120";
+        var classId = "114776179";
+        var cpi = "414674295";
+
+        var sourceObj = {
+            "serverName": "mooc1",
+            "businessTag": "question_assistant",
+            "extraData": {
+                "courseId": courseId,
+                "clazzId": classId,
+                "personId": cpi,
+                "relationType": taskType,
+                "relationId": taskId,
+                "questionType": questionType,
+                "questionTypeId": questionTypeId,
+                "questionId": questionId
+            }
+        };
+        var sourceInfo = JSON.stringify(sourceObj);
+        sourceInfo = encodeURIComponent(sourceInfo);
+
+        var text = getPlainText(exampleId, questionType);
+        if (text.length > 0) {
+            postTextMsg(text, sourceInfo);
+            return;
+        }
+
+        loadImgData(exampleId, sourceInfo);
+    }
+
+    function loadImgData(exampleId, sourceInfo) {
+        $.toast({type: "loading", time: 0, content: "生成提问中..."});
+
+        var tempDiv = cloneOriginDiv(exampleId);
+        $("#" + exampleId).append(tempDiv);
+
+        processImagesInDiv(tempDiv).then(() => convertDivToImage(tempDiv)).then((data) => {
+            var imgData = data.toDataURL("image/png", 0.9);
+            showAssistant(imgData, sourceInfo);
+            tempDiv.remove();
+            $("#dialogToast").remove();
+        }).catch((error) => {
+            console.error("处理图片或转换为图片时出错:", error);
+            $.toast({type: "failure", content: "处理图片或转换图片出错，请稍后重试"});
+            tempDiv.remove();
+            $("#dialogToast").remove();
+        });
+    }
+
+    function cloneOriginDiv(id) {
+        var originDiv = $("#" + id).find(".aiAreaContent")[0];
+        return originDiv.cloneNode(true);
+    }
+
+    function processImagesInDiv(tempDiv) {
+        var imgPromises = [];
+        $(tempDiv).find("img").each(function (idx, ele) {
+            var url = ele.src;
+            if (url.length === 0 || (url.indexOf(imgUrl1) < 0 && url.indexOf(imgUrl2) < 0)) {
+                return true;
+            }
+            var arr = url.split("star3");
+            if (arr.length < 2) {
+                return true;
+            }
+            url = location.protocol + "//" + location.hostname + "/p-ans/star3" + arr[1];
+
+            var imgPromise = new Promise((resolve, reject) => {
+                var newImg = new Image();
+                newImg.onload = () => {
+                    ele.src = url;
+                    resolve();
+                };
+                newImg.onerror = reject;
+                newImg.src = url;
+            });
+            imgPromises.push(imgPromise);
+        });
+
+        return Promise.all(imgPromises);
+    }
+
+    function convertDivToImage(tempDiv) {
+        return html2canvas(tempDiv, {
+            ignoreElements: function (element) {
+                return element.classList.contains("element-invisible-hidden");
+            }
+        });
+    }
+
+    function showAssistant(imgData, sourceInfo) {
+        try {
+            CozeBotSDK.init({
+                appId: "1192651262850",
+                botId: "7429626930406326309",
+                rootElementId: "aiAssistantId",
+                upload: true,
+                target: 'https://stat2-ans.chaoxing.com',
+                sourceInfo: sourceInfo
+            });
+
+            CozeBotSDK.sendToIframeMessage({
+                eventName: "callCozeConversation",
+                isLastWindow: true
+            });
+
+            setTimeout(function () {
+                CozeBotSDK.sendToIframeImageBase64({
+                    eventName: "sendImgFile",
+                    imageBase64: imgData,
+                    presetMsg: "讲解一下这道题",
+                    model: 1
+                });
+            }, 1000);
+        } catch (e) {
+            console.error("Error in CozeBotSDK:", e);
+        }
+    }
+
+    function postTextMsg(text, sourceInfo) {
+        try {
+            CozeBotSDK.init({
+                appId: "1192651262850",
+                botId: "7429626930406326309",
+                rootElementId: "aiAssistantId",
+                upload: true,
+                target: 'https://stat2-ans.chaoxing.com',
+                sourceInfo: sourceInfo
+            });
+
+            CozeBotSDK.sendToIframeMessage({
+                eventName: "callCozeConversation",
+                isLastWindow: true
+            });
+
+            setTimeout(function () {
+                CozeBotSDK.sendToIframeMessage({
+                    eventName: "sendMsgCozeConversation",
+                    msg: text,
+                    model: 1
+                });
+            }, 1000);
+        } catch (e) {
+            console.error("Error in CozeBotSDK:", e);
+        }
+    }
+
+    function getPlainText(id, questionType) {
+        var source = $("#" + id);
+        var contnt = source.find(".qtContent");
+        if (contnt.find("img, iframe").length > 0) {
+            return "";
+        }
+        var html = "讲解一下这道题：\n" + "\#\#\# 题目：\n" + contnt.text() + "\n";
+
+        var detail = source.find(".qtDetail");
+        if (detail.find("img, iframe").length > 0) {
+            return "";
+        }
+        if (questionType == 11 || questionType == 14) {
+            detail.find("dt, dd").each(function () {
+                var option = $(this).text();
+                html += option + "\n";
+            });
+        } else if (questionType == 20) {
+            detail.each(function () {
+                var option = $(this).text();
+                html += option + "\n";
+            });
+        } else {
+            detail.find("li").each(function () {
+                var option = $(this).text();
+                html += option + "\n";
+            });
+        }
+
+        var studentAnswer = source.find(".stuAnswerContent");
+        if (studentAnswer.find("img, iframe").length > 0) {
+            return "";
+        }
+        if (studentAnswer.length > 0) {
+            html += "\#\#\# 我的答案：\n";
+        }
+        studentAnswer.each(function () {
+            if (questionType == 17) {
+                var answer = $(this).html();
+                var htmlContent = $(answer);
+                htmlContent.children("*").each(function () {
+                    var text = $(this).text().trim();
+                    if (text) {
+                        html += text + "\n";
+                    }
+                });
+            } else {
+                var option = $(this).text();
+                html += option + "\n";
+            }
+        });
+
+        var rightAnswer = source.find(".rightAnswerContent");
+        if (rightAnswer.find("img, iframe").length > 0) {
+            return "";
+        }
+        if (rightAnswer.length > 0) {
+            html += "\#\#\# 正确答案：\n";
+        }
+        rightAnswer.each(function () {
+            var option = $(this).text();
+            html += option + "\n";
+        });
+
+        var analysis = source.find(".qtAnalysis");
+        if (analysis.find("img, iframe").length > 0) {
+            return "";
+        }
+        if (analysis.length > 0 && analysis.text().trim().length > 0) {
+            html += "\#\#\# 答案解析：\n" + analysis.text() + "\n";
+        }
+
+        return html;
+    }
+</script><link rel="stylesheet" type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/mooc2/css/prompt.css?v=2023-0711-1500"/>
+<style>
+	.mask-no-bg{background:none!important;}
+	.mask-no-bg .popDiv{box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.08);}
+</style>
+<div class="maskDiv" style="display:none;" id="workpop">
+	<div class="popDiv wid440 Marking">
+		<div class="popHead" id="workpopFocus" role="alertdialog" tabindex="0">
+			<a id="popCloseFocus"  href="javascript:;" class="popClose fr" onclick="popClickFunc()" tabindex="-1"><img src="//mooc1-api.chaoxing.com/mooc-ans/images/popClose.png" id="popCloseFocusImg" onkeydown="if(event.keyCode == 13){popCloseFocus();}" role="button" tabindex="-1" aria-label="关闭"/></a>
+			<p class="fl fs18 colorDeep" tabindex="0" role="option">提示</p>
+		</div>
+		<div class="het62"></div>
+		<p class="popWord fs16 colorIn" id="popcontent" tabindex="0"></p>
+
+		<div class="popBottom">
+			<a href="javascript:;" id="popok" class="jb_btn jb_btn_92 fr fs14" tabindex="0" role="button" aria-label="确定"></a>
+			<a href="javascript:;" id="popno" class="btnBlue btn_92_cancel fr fs14" onkeydown="popnoFocus();" tabindex="0" role="button" aria-label="取消"></a>
+		</div>
+		<div class="het72"></div>
+			</div>
+</div>
+
+<div class="mask-no-bg" style="display:none;" id="worktoast">
+	<div class="popDiv wid440 Marking" style="top: 30%;">
+		<div class="popHead">
+			<a href="javascript:;" class="popClose fr" onclick="toastClickFunc()"><img src="//mooc1-api.chaoxing.com/mooc-ans/images/popClose.png" /></a>
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<p class="popWord fs16 colorIn" id="toastcontent"></p>
+
+		<div class="popBottom">
+			<a href="javascript:;" id="toastok" class="jb_btn jb_btn_92 fr fs14"></a>
+			<a href="javascript:;" id="toastno" class="btnBlue btn_92_cancel fr fs14"></a>
+		</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;" id="hintPop">
+	<div class="popDiv wid440 Marking">
+		<div class="popHead">
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<p class="popWord fs16 colorIn" id="hintCon"></p>
+		<div class="popBottom">
+			<a href="javascript:;" id="hintOk" class="jb_btn jb_btn_92 fr fs14"></a>
+		</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+<script>
+function popClickFunc() {
+	$('#workpop').hide();
+	if($('.popSetupShowHide').length > 0){
+		$('.popSetupShowHide').fullFadeOut();
+	}
+}
+
+function toastClickFunc() {
+	$('#worktoast').hide();
+	if($('.popSetupShowHide').length > 0){
+		$('.popSetupShowHide').fullFadeOut();
+	}
+}
+
+
+function workPop(content, okTent, cancelTent, okcallback, cancelCallback) {
+	var ta = $("#workpop");
+
+	if($('.popSetupShowHide').length > 0){
+		$(".popSetupShowHide").fullFadeIn();
+	}
+
+	ta.show();
+	
+	$("#popcontent").html(content);
+	var popokHiddenRead = $("#popokHiddenRead");
+
+	var ok = $("#popok");
+	ok.html(okTent);
+	ok.unbind();
+	ok.on("click", function() {
+		// 无障碍单位走定制,延迟语音读取处理
+		if("0" == "1") {
+			popokHiddenRead.attr("tabindex","0");
+			if (content && content != '很遗憾，未达到及格线，请重做') {
+				popokHiddenRead.focus();
+			}
+			setTimeout(function() {
+				okcallback && okcallback(ta);
+				popokHiddenRead.attr("tabindex","-1")
+				ta.hide();
+				if($('.popSetupShowHide').length > 0) {
+					$(".popSetupShowHide").fullFadeOut();
+				}
+			}, 1000)
+		} else {
+			okcallback && okcallback(ta);
+			ta.hide();
+
+			if($('.popSetupShowHide').length > 0) {
+				$(".popSetupShowHide").fullFadeOut();
+			}
+		}
+	});
+
+	var cancel = $("#popno");
+	cancel.html(cancelTent);
+	cancel.unbind();
+	cancel.on("click", function() {
+		cancelCallback && cancelCallback(ta);
+		ta.hide();
+		if($('.popSetupShowHide').length > 0) {
+			$(".popSetupShowHide").fullFadeOut();
+		}
+	});
+	if("0" == "1") {
+		$("#workpopFocus").focus();
+	}
+}
+
+function workToast(content, okTent, cancelTent, okcallback, cancelCallback) {
+	var ta = $("#worktoast");
+
+	if($('.popSetupShowHide').length > 0) {
+		$(".popSetupShowHide").fullFadeIn();
+	}
+
+	ta.show();
+
+	$("#toastcontent").html(content);
+
+	var ok = $("#toastok");
+	ok.html(okTent);
+	ok.unbind();
+	ok.on("click", function() {
+		okcallback && okcallback(ta);
+		ta.hide();
+
+		if($('.popSetupShowHide').length > 0) {
+			$(".popSetupShowHide").fullFadeOut();
+		}
+	});
+
+	var cancel = $("#toastno");
+	cancel.html(cancelTent);
+	cancel.unbind();
+	cancel.on("click", function() {
+		cancelCallback && cancelCallback(ta);
+		ta.hide();
+		if($('.popSetupShowHide').length > 0) {
+			$(".popSetupShowHide").fullFadeOut();
+		}
+	});
+}
+
+function workHint(content, okTent, okcallback) {
+	var ta = $("#hintPop");
+
+	if($('.popSetupShowHide').length > 0) {
+		$(".popSetupShowHide").fullFadeIn();
+	}
+
+	ta.show();
+
+	$("#hintCon").html(content);
+
+	var ok = $("#hintOk");
+	ok.html(okTent);
+	ok.unbind();
+	ok.on("click", function() {
+		okcallback && okcallback(ta);
+		ta.hide();
+
+		if($('.popSetupShowHide').length > 0) {
+			$(".popSetupShowHide").fullFadeOut();
+		}
+	});
+}
+
+function popFocus() {
+	if("0" != "1") {
+		return;
+	}
+	$("#popCloseFocusImg").attr("tabindex","0");
+	$("#popCloseFocus").focus();
+}
+function popCloseFocus() {
+	if("0" != "1") {
+		return;
+	}
+	$('#workpop').hide();
+	if($('.popSetupShowHide').length > 0) {
+		$('.popSetupShowHide').fullFadeOut();
+	}
+	$("#popCloseFocusImg").attr("tabindex","-1");
+}
+function popnoFocus() {
+	if("0" != "1") {
+		return;
+	}
+	if(event.keyCode == 9){
+		popFocus();
+	}
+	if(event.keyCode == 13){
+		$("#popCloseFocusImg").attr("tabindex","-1");
+	}
+}
+
+</script><!-- 代码高亮开始 start -->
+<link type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/views/mooc2/ueditor/insertcode/css/default.min.css" rel="stylesheet" />
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/highlight.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/mooc-ans/js/highlightjs-line-numbers.js" charset="utf-8"></script>
+<style>
+    pre,code {display: block;background: #F7F8FA;border: 1px solid #E1E3E5; font-size: 14px; border-radius: 4px; padding: 30px 20px; margin: 20px 0; font-family: CXHackSafariFont,CXEmojiFont,CXChineseQuote,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Tahoma, Arial,Segoe UI,PingFang SC, Hiragino Sans GB,Microsoft YaHei,sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,Noto Color Emoji; }
+    pre{overflow-x: auto;margin:.5em 0;padding:.4em .6em;border-radius:8px;background:#f8f8f8;}
+    pre.autolinebreak{white-space: normal; }
+    code.hljs{background: #F7F8FA;}
+    pre code,pre pre{ margin: 0; background: none;border: none;}/*padding: 0;*/
+    .code-tool-wrap{padding-bottom: 1em;left: 20px; top: 2px; width: calc(100% - 40px); height: 24px; font-size: 14px; user-select: none;}
+    .code-lang{ display:inline-block; color: #ACB4BF; }
+    .ans-cc .ans-noborder th,.ans-cc .ans-noborder td{border-color:transparent;}
+    .ans-cc pre,.ans-cc code{ position: relative; padding: 0px 20px 30px; margin: 20px 0;border: 1px solid #E1E3E5; border-radius: 4px; color: #474C59; background: #F7F8FA; font-size:14px; font-family: CXHackSafariFont,CXEmojiFont,CXChineseQuote,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Tahoma, Arial,Segoe UI,PingFang SC, Hiragino Sans GB,Microsoft YaHei,sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,Noto Color Emoji;  }
+    .ans-cc pre{overflow: auto}
+    .ans-cc pre code,.ans-cc pre pre{ padding: 0; border:none; margin: 0; background: none;border-radius: 0;}
+    .ans-cc pre.autolinebreak{white-space: pre-wrap;word-wrap: break-word;}
+    .hljs-ln-numbers {text-align: center;color: #ccc;border-right: 1px solid #CCC;vertical-align: top;padding-right: 5px !important;}
+    .hljs-ln-code {padding-left: 5px !important;}
+    /* 全局去掉表格样式 */
+    .ans-cc pre code table tr td {border: solid 0px #cfd4dc;text-align: left}
+    /* 作业表格适配，考试表格适配 */
+    .ans-cc pre table{table-layout: unset;}
+    .ans-cc pre code table{table-layout: unset;}
+    /* pre 标签未换行 */
+    .ans-cc pre.line-numbers{clear:both}
+    .ans-cc pre{clear:both}
+
+    /* app作业库 考试库 查看样式 */
+
+    .hljs-link, .hljs-operator, .hljs-regexp, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-symbol, .hljs-template-variable, .hljs-variable {
+        color: #ab5656 !important;
+    }
+    .hljs-deletion, .hljs-number, .hljs-quote, .hljs-selector-class, .hljs-selector-id, .hljs-string, .hljs-template-tag, .hljs-type {
+        color: #800 !important;
+    }
+    /* 章节作业 */
+    .hljs-ln span{margin-right:0}
+
+    /* 学习通颜色覆盖 */
+    .hljs-type{color:#800 !important;}
+    .hljs-section,.hljs-title{color:#800 !important;font-weight:700}
+    /* 背景颜色 */
+    .ans-cc pre code td{background-color: unset;}
+</style>
+<link type="text/css" href="//mooc1-api.chaoxing.com/mooc-ans/css/newEditor.css?v=2023-0609-1900" rel="stylesheet" />
+<script>
+    /**
+     * 保证最后加载
+     */
+    $(function () {
+        var pre = $(".ans-cc").find('pre')
+        if(pre){
+            pre.each(function () {
+                // debugger
+                var me = this;
+                if ($(me).hasClass('CodeMirror-line')) { //代码编辑器
+                    return;
+                }
+                var lang = me.firstChild && me.firstChild.lang;
+                if (typeof (lang) == 'undefined' || lang == null || lang == "" ) {
+                    lang = me.firstChild && me.firstChild.className;
+                    if (typeof (lang) != 'undefined' && lang != null && lang != "" ) {
+                        var split = lang.split("-");
+                        lang = split[1];
+                        if (lang == 'plain') {
+                            lang = 'Plain Text';
+                        }
+                    } else {
+                        lang = 'Plain Text';
+                    }
+                }
+                me.innerHTML = '<div class="code-tool-wrap clearfix"><div class="code-lang fl">' + lang
+                        + '</div><div class="copy1 fr"><i></i><span></span></div></div>' + me.innerHTML;
+                me.innerHTML = me.innerHTML.replace(/<br\s*\/?>/g, "\n");
+            })
+        }
+
+        try {
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad({ singleLine:true });
+        } catch (e) {
+
+        }
+    })
+</script>
+<!-- 代码高亮结束 end --><script>
+
+$(function () {
+	$(".viewAttach").find("span:first").each(function () {
+		$(this).attr("onclick", "viewMark(this);");
+	});
+});
+
+var courseId = $("#courseId").val();
+var classId = $("#classId").val();
+var cpi = $("#cpi").val();
+var workId = $("#workId").val();
+var answerId = $("#answerId").val();
+var enc = $("#enc").val();
+
+function modifyAnswer() {
+	location.href = "/mooc-ans/mooc2/work/dowork?courseId=249848120&classId=114776179&cpi=414674295&workId=43858076"
+			+ "&answerId=53787455&knowledgeId=&jobid=&standardEnc=9f715b7fe28b6ab266f1f531f9a0feb9&enc=5154db3f9080474ea652fdca18d95cd6";
+}
+
+function redoWork() {
+	
+	var redoTimes = 0 + 0 - 0;
+	var msg = "你还可以重做" + redoTimes + "次，确认重做后，前一次作答记录会被覆盖，作业成绩以本次成绩为最终成绩，是否继续？";
+	
+	workPop(msg, "重做", "取消", function() {
+		$.ajax({
+			type : "get",
+			url : _HOST_CP2_ + "/work/phone/redo",
+			dataType : "json",
+			data : {
+				courseId : courseId,
+				classId : classId,
+				cpi : cpi,
+				workId : workId,
+				workAnswerId : answerId
+			},
+			success : function(data) {
+				if(data.status == 1) {
+					location.href = "/mooc-ans/mooc2/work/dowork?courseId=249848120&classId=114776179&cpi=414674295&workId=43858076&answerId=53787455&knowledgeId=&jobid=&standardEnc=9f715b7fe28b6ab266f1f531f9a0feb9&enc=5154db3f9080474ea652fdca18d95cd6";
+				} else {
+					$.toast({
+						type : 'failure',
+						content : data.msg
+					});
+				}
+			}
+		});
+	});
+}
+
+var recordLock = 0
+function answerList() {
+	if(recordLock == 1) {
+		return;
+	}
+	recordLock = 1;
+	
+	$.ajax({
+		type : "get",
+		url : _HOST_CP2_ + "/mooc2/work/answer-list",
+		dataType : "html",
+		data : {
+			courseId : courseId,
+			classId : classId,
+			cpi : cpi,
+			workId : workId,
+			answerId : answerId,
+			enc : enc
+		},
+		success : function(data) {
+			$("#content").html(data);
+			$("#recordList").show();
+			MoveFixed();
+		}
+	});
+}
+
+function closeAnswers() {
+	$("#recordList").hide();
+	recordLock = 0;
+}
+
+function MoveFixed() {
+	$('.popMove').css({
+		top : function() {
+			return ($(window).height() - $(this).height()) / 2;
+		},
+		left : function() {
+			return ($(window).width() - $(this).width()) / 2;
+		}
+	});
+	
+	$("#boxscroll").niceScroll({
+		cursorborder : "",
+		cursorcolor : "#D9DDE1",
+		boxzoom : false
+	});
+}
+
+</script>
+</body>
+</html>
